@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const ion = document.createElement('ion-icon');
       ion.setAttribute('name', icon);
+      ion.classList.add('ion-icon');
 
       spanIcon.appendChild(ion);
       a.appendChild(spanName);
