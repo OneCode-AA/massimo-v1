@@ -1,0 +1,52 @@
+@media (min-width: 768px) {
+
+
+
+
+.emailContainer {
+    display: flex;
+}
+
+.socialContainerBody {
+    display: flex;
+}
+
+.hero {
+  margin: 0;
+
+}
+.innerFlexContainer {
+    display: flex;
+    width: 100%;
+    gap: 3rem;
+   
+}
+
+.job-ul {
+  flex-direction: column;
+
+}
+
+.job-li {
+ width: 200px;
+
+  padding-block: 6px;
+  padding-inline: 5px;
+  display: inline-block;
+  margin: 0; 
+  text-align: center;
+  position: relative;
+  background-color: none;
+    animation: background-color 4s ease-in-out;
+    border-left: 2px solid var(--theme-primary);
+
+}
+
+.job-li::after {
+  all: unset;
+}
+
+.job-li.active {
+    background: none;
+}
+}

@@ -1,0 +1,33 @@
+@media (min-width: 1024px) {
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90vw;
+        max-width: 1200px;
+        width: 100%;
+        padding-block: unset;
+        height: 60px;
+        margin-block: 10px;
+        padding-inline: 10px;
+        z-index: 1000;
+        border-radius: 2rem;
+    }
+
+    
+       
+    .menuBtn {
+        display: none;
+    }
+
+    .contactBtnDesktop {
+  display: flex;
+}
+    .navDesktop {
+        display: flex;
+    }
+
+
+}
