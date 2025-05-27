@@ -9,20 +9,20 @@
   --font-gill: "Gill Sans", sans-serif;
   --font-fantasy: fantasy;
   --font-poppin: 'Poppins', sans-serif;
---font-montserrat: "Montserrat", sans-serif;
---font-roboto:"Roboto", sans-serif;
---font-roboto-mono: "Roboto Mono", monospace;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-roboto-mono: "Roboto Mono", monospace;
   --font-alt: 'Vogue', sans-serif;
   --font-future: "Saira Stencil One", sans-serif;
   --transition: 500ms ease-in-out;
 
 
   --bg-primary: #fcfcfb;
---theme-primary: dodgerblue;
---theme-secondary: #2563eb;
+  --theme-primary: dodgerblue;
+  --theme-secondary: #2563eb;
   --theme-third: #3b82f6;
 
-  --theme-third:  #172554;
+  --theme-third: #172554;
   --theme-fourth: #1e3a8a;
   --font-color: rgba(95, 94, 94, 0.818);
   --color-primary: #060704;
@@ -33,37 +33,41 @@
 }
 
 html {
-    box-sizing: border-box;
-    height: 100vh;
-    width: 100vw;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  max-height: 100vh;
+  height: 100%;
+  max-width: 100vw;
+  width: 100%;
+  scroll-behavior: smooth;
 }
 
 * {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style-type: none;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
 }
 
 
 body {
-    font-size: 90.3%;
-    font-family: var(--font-primary);
-    background: var(--bg-primary);
-    color: var(--color-primary);
-    transition: var(--transition);
-    overflow-x: auto;
-    position: relative;
+  font-size: 90.3%;
+  font-family: var(--font-primary);
+  background: var(--bg-primary);
+  color: var(--color-primary);
+  transition: var(--transition);
+  overflow-x: auto;
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 body.loading {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 a {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 
@@ -75,19 +79,21 @@ a {
 
 
 .introContainer {
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    margin: auto;
-    background: var(--bg-primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  max-width: 100vw;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  margin: auto;
+  background: var(--bg-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
 }
 
 .introCircle {
@@ -106,19 +112,19 @@ a {
 
 
 .fadeOut {
-    opacity: 0;
-    pointer-events: none;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .progressRing {
-    transform: rotate(-90deg);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .progressRingCircle {
@@ -126,9 +132,9 @@ a {
   align-items: center;
   justify-content: center;
   margin: auto;
-    stroke-dasharray: 339.292;
-    stroke-dashoffset: 339.292;
-    animation: fillCircle 2s ease-out forwards;
+  stroke-dasharray: 339.292;
+  stroke-dashoffset: 339.292;
+  animation: fillCircle 2s ease-out forwards;
 }
 
 @keyframes fillCircle {
@@ -147,7 +153,7 @@ a {
   animation-delay: 2.2s;
   letter-spacing: -9px;
   z-index: 500;
- 
+
 }
 
 @keyframes fadeIn {
@@ -155,6 +161,7 @@ a {
     opacity: 0;
     transform: scale(0.8);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -202,7 +209,7 @@ a {
 
 
 .introText, .logoText {
-    font-family: var(--font-future)
+  font-family: var(--font-future)
 }
 
 
@@ -213,21 +220,21 @@ a {
 
 
 .header {
-    background: var(--bg-primary);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-block: 20px;
-    padding-inline: 30px;
-    width: 100%;
-    height: max-content;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 40;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: top 0.3s;
+  background: var(--bg-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 20px;
+  padding-inline: 30px;
+  width: 100%;
+  height: max-content;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 40;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: top 0.3s;
 }
 
 
@@ -237,7 +244,7 @@ a {
 ========================= */
 
 .navDesktop {
-    display: none;
+  display: none;
 }
 
 
@@ -274,8 +281,8 @@ a {
 
 .navDesktop ul li:hover a::after {
   width: 100%;
- 
-  
+
+
 }
 
 
@@ -284,8 +291,10 @@ a {
   position: fixed;
   top: -200vh;
   left: 0;
+  max-width: 100vw;
   width: 100%;
   max-height: 100vh;
+  width: 100%;
   padding-top: 6rem;
   background: var(--bg-primary);
   flex-direction: column;
@@ -294,8 +303,8 @@ a {
   opacity: 0;
   z-index: 30;
   transform: translateY(-2.50rem);
-    transition: 600ms ease-in-out;
-  
+  transition: 600ms ease-in-out;
+
 }
 
 .navMobile.opened {
@@ -303,8 +312,8 @@ a {
   opacity: 1;
   display: flex;
   transform: translateY(0);
-     transition: top 600ms ease-in-out;
-  
+  transition: top 600ms ease-in-out;
+
 }
 
 .navMobile ul {
@@ -497,9 +506,17 @@ a {
   position: relative;
 }
 
-.menuBtn .first { width: 30px; }
-.menuBtn .second { width: 24px; }
-.menuBtn .third { width: 18px; }
+.menuBtn .first {
+  width: 30px;
+}
+
+.menuBtn .second {
+  width: 24px;
+}
+
+.menuBtn .third {
+  width: 18px;
+}
 
 .isActive .first {
   position: absolute;
@@ -542,7 +559,7 @@ a {
 }
 
 .contactBtnDesktop:hover {
-transform: scale(1.02);
+  transform: scale(1.02);
   background: var(--theme-primary);
   border-radius: 2rem;
   color: var(--color-secondary);
@@ -560,21 +577,22 @@ transform: scale(1.02);
   position: fixed;
   left: 40px;
   top: -100vw;
- display: none;
-max-width: 20px;
-height: 100%;
-max-height: 100vh;
-width: fit-content;
- align-items: center;
- justify-content: center;
- animation: dropDown 1s ease-in-out forwards;
- animation-delay: 1s;
+  display: none;
+  max-width: 20px;
+  height: 100%;
+  max-height: 100vh;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  animation: dropDown 1s ease-in-out forwards;
+  animation-delay: 1s;
 }
 
 @keyframes dropDown {
   from {
     top: -100vw;
   }
+
   to {
     top: 0;
   }
@@ -589,13 +607,13 @@ width: fit-content;
   position: absolute;
   bottom: 50px;
 
-  
+
 }
 
 .scrollingEmail {
-    writing-mode: vertical-rl;
-text-orientation: upright;
-color: var(--font-color);
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: var(--font-color);
 }
 
 
@@ -603,7 +621,7 @@ color: var(--font-color);
 /*  */
 
 .socialContainerBody {
-position: fixed;
+  position: fixed;
   right: 26px;
   top: -100vw;
   display: none;
@@ -621,21 +639,22 @@ position: fixed;
   from {
     top: -100vw;
   }
+
   to {
     top: 0;
   }
 }
 
 .bodySocial-ul {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
 }
 
 .bodySocial-ul::before {
-    content: "";
+  content: "";
   height: 1px;
   width: clamp(50%, 30vw, 200px);
   background: var(--theme-primary);
@@ -651,8 +670,8 @@ position: fixed;
 
 
 .bodySocial-ul a .spanIcon {
-    font-size: 3rem;
-    
+  font-size: 3rem;
+
 }
 
 .bodySocial-ul .socialLink {
@@ -677,7 +696,7 @@ position: fixed;
   justify-content: center;
   align-items: center;
   gap: 3rem;
-  
+
 
 }
 
@@ -687,7 +706,8 @@ position: fixed;
   padding-inline: 10px;
   padding-block: 2rem;
 
-  margin-block: 2rem; ;
+  margin-block: 2rem;
+  ;
   text-align: left;
 }
 
@@ -712,21 +732,21 @@ position: fixed;
 
 .hero {
   margin-top: 3rem;
-    min-height: 70vh;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  min-height: 70vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
 .heroContainer {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: start;
   text-align: left;
-    gap: 2rem;
+  gap: 2rem;
 }
 
 .heroIntro {
@@ -736,6 +756,7 @@ position: fixed;
   gap: 0.3rem;
 
 }
+
 .heroIntro .name {
   font-size: clamp(1.4rem, 3vw, 4rem);
   text-transform: uppercase;
@@ -747,10 +768,10 @@ position: fixed;
   color: var(--theme-primary);
   font-weight: 500;
   text-transform: uppercase;
- 
+
 }
 
- .nameXo {
+.nameXo {
   color: dodgerblue;
 }
 
@@ -792,7 +813,7 @@ position: fixed;
 .heroBtnContact {
   background: var(--color-primary);
   color: var(--bg-primary);
-    transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
 }
 
 .heroBtnContact:hover, .heroBtnProjects:hover {
@@ -842,15 +863,15 @@ position: fixed;
 }
 
 .job-li {
- width: 100%;
+  width: 100%;
   padding-block: 6px;
   padding-inline: 5px;
   display: inline-block;
-  margin: auto 0; 
+  margin: auto 0;
   text-align: center;
   position: relative;
   background-color: var(--card-shadow);
-    animation: background-color 4s ease-in-out;
+  animation: background-color 4s ease-in-out;
 
 }
 
@@ -872,7 +893,7 @@ position: fixed;
   background-color: var(--theme-primary);
   color: var(--color-secondary);
   animation: background-color 1s ease-in-out;
- animation-delay: 2s;
+  animation-delay: 2s;
 }
 
 .job-li.active::after {
@@ -890,7 +911,7 @@ position: fixed;
   gap: 0.7rem;
 }
 
-.occupationContainer  {
+.occupationContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -914,7 +935,7 @@ position: fixed;
 
 
 .job p {
-     text-wrap: nowrap;
+  text-wrap: nowrap;
 }
 
 .occupation .description {
@@ -933,11 +954,12 @@ position: fixed;
 }
 
 .projectCard {
-    border: 1px solid var(--color-primary);
-    padding: 5px;
-    margin-block: 2rem;
-    border-radius: 8px;
+  border: 1px solid var(--color-primary);
+  padding: 5px;
+  margin-block: 2rem;
+  border-radius: 8px;
 }
+
 .cardIntro {
   max-height: 400px;
   height: 100%;
@@ -962,7 +984,7 @@ position: fixed;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-   margin: 10px 0;
+  margin: 10px 0;
 }
 
 .tech .techList .techItem {
@@ -974,8 +996,8 @@ position: fixed;
   padding-block: 2px;
   border-radius: 1.3rem;
   font-weight: 800;
- 
-  
+
+
 }
 
 
@@ -990,6 +1012,7 @@ position: fixed;
 .tech h4 {
   color: var(--font-color);
 }
+
 /* ========================
    Skills
 ======================== */
@@ -1001,7 +1024,7 @@ position: fixed;
   align-items: start;
   gap: 2rem;
   text-wrap: nowrap;
-}  
+}
 
 
 
